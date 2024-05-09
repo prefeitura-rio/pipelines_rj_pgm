@@ -21,6 +21,6 @@ models:
     relation: true
     columns: true
   queries:
-    example:
-      +materialized: view
-      +schema: example
+    adm_financas_divida_ativa:
+          +materialized: table
+          +schema: adm_financas_divida_ativa
