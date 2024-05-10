@@ -1,0 +1,28 @@
+version: 2
+models :
+  - name: inscritos_divida_ativa
+    description: "**Descrição**: Contribuintes com débitos inscritos em dívida ativa,\
+      \ contendo as dívidas em cobrança, com exceção das suspensas e parceladas. Dívida\
+      \ ativa é qualquer valor devido à prefeitura municipal do Rio de Janeiro, caso\
+      \ não seja pago dentro do prazo de vencimento. O banco de dados onde ficam registrados\
+      \ os contribuintes com dívida ativa também é chamado dívida ativa.\n**Frequência\
+      \ de atualização**: Nunca\n**Cobertura temporal**: Desde o início do registro\
+      \ da dívida ativa\n**Órgão gestor dos dados**: PGM\n**Publicado por**: Elisa\
+      \ Angela Tripicchio\n**Publicado por (email)**: elisa.tripicchio@iplanrio.rio.rj.gov.br\n"
+    columns:
+      - name: nome
+        description: Nome do contribuinte.
+      - name: cpf_cnpj
+        description: CPF/CNPJ do contribuinte.
+      - name: cpf_cnpj_formatado
+        description: CPF/CNPJ formatado do contribuinte.
+      - name: ano_inscricao
+        description: Ano da inscrição na dívida ativa.
+      - name: valor_debito
+        description: Valor total do saldo do débito, somando principal e honorários
+          advocatícios
+      - name: data_ultima_atualizacao
+        description: Data da última atualização. Qualquer inscrição na dívida ativa
+          após está data ainda não será vista nesta visão.
+      - name: tipo_documento
+        description: Indica se o documento é CPF ou CNPJ
